@@ -3,9 +3,9 @@ import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 
 import z from 'zod';
 
-import { init } from './tools/init';
-import { feature } from './tools/feature';
-import { context } from './tools/context';
+import { init } from './tools/init.js';
+import { feature } from './tools/feature.js';
+import { context } from './tools/context.js';
 
 export const server = new McpServer({
   name: 'React over Vite MCP server',

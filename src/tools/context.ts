@@ -3,7 +3,8 @@ import { CallToolResult } from '@modelcontextprotocol/sdk/types.js';
 import path from 'node:path';
 import fs from 'node:fs';
 
-import { run_commands } from '../utils/run-commands';
+import { run_commands } from '../utils/run-commands.js';
+import { buildCopyCommand } from '../utils/build-copy-command.js';
 
 interface IIcontextArgs {
   name: string;
@@ -42,10 +43,14 @@ const wrap_with_context = (projectPath: string, contextName: string, name: strin
 
 export const context = async ({ name, parent }: IIcontextArgs): Promise<CallToolResult> => {
   const pascalCaseName = name.charAt(0).toUpperCase() + name.slice(1);
+  const copyCommand = buildCopyCommand({
+    from: '../../templates/context',
+    to: [parent, 'src', 'shared', 'context', name],
+  });
 
   const commands: string[] = [
     `mkdir -p ${parent}/src/shared/context/${name}`,
-    `cp -r ./templates/context/. ./${parent}/src/shared/context/${name}`,
+    copyCommand,
     `cd ${parent}/src/shared/context/${name} && find . -type f -exec sed -i '' "s/Placeholder/${pascalCaseName}/g" {} \\;`,
     `find ./${parent}/src/shared/context/${name} -depth -name "*Placeholder*" -exec bash -c 'f="{}"; mv "$f" "\${f//Placeholder/${pascalCaseName}}"' \\;`,
   ];

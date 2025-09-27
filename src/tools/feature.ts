@@ -3,7 +3,8 @@ import path from 'node:path';
 
 import { CallToolResult } from '@modelcontextprotocol/sdk/types.js';
 
-import { run_commands } from '../utils/run-commands';
+import { run_commands } from '../utils/run-commands.js';
+import { buildCopyCommand } from '../utils/build-copy-command.js';
 
 interface IAppendRouteArgs {
   kebabCaseName: string;
@@ -53,10 +54,15 @@ export const feature = async ({ parent, name }: IFeatureArgs): Promise<CallToolR
   const kebabCaseName = name.toLowerCase();
   const camelCaseName = name.charAt(0).toLowerCase() + name.slice(1);
 
+  const copyCommand = buildCopyCommand({
+    from: '../../templates/feature',
+    to: [parent, 'src', 'pages', kebabCaseName],
+  });
+
   const commands: string[] = [
     `mkdir -p ${parent}/src/pages/${kebabCaseName}`,
     `touch ${parent}/src/pages/${kebabCaseName}/{page.tsx,page.module.css,action.ts,loader.ts,middleware.ts,error.boundary.tsx}`,
-    `cp -r ./templates/feature/. ./${parent}/src/pages/${kebabCaseName}/`,
+    copyCommand,
     `cd ${parent}/src/pages/${kebabCaseName} && find . -type f -exec sed -i '' "s/_class_/${pascalCaseName}/g" {} \\;`,
     `cd ${parent}/src/pages/${kebabCaseName} && find . -type f -exec sed -i '' "s/_function_/${camelCaseName}/g" {} \\;`,
   ];

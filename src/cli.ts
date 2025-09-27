@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import { init } from './tools/init';
-import { feature } from './tools/feature';
-import { context } from './tools/context';
+import { init } from './tools/init.js';
+import { feature } from './tools/feature.js';
+import { context } from './tools/context.js';
 
 const [, , cmd, ...args] = process.argv;
 
