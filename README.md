@@ -18,4 +18,4 @@ also, if your'e using claude CLI (hopefully any other llm cli) you can focus on 
 
 - Init - can be used from the terminal to get you up and running with a react/vite app
 - Feature - will add what I currently consider is a end to end feature boilerplate, as well as connect it to the router
-- Context - will add a context boilerplate
+- Context - will add a context boilerplate & wrap root routes provider with the context provider
