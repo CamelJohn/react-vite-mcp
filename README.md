@@ -19,3 +19,9 @@ also, if your'e using claude CLI (hopefully any other llm cli) you can focus on 
 - Init - can be used from the terminal to get you up and running with a react/vite app
 - Feature - will add what I currently consider is a end to end feature boilerplate, as well as connect it to the router
 - Context - will add a context boilerplate & wrap root routes provider with the context provider
+
+## Commands & Usage
+
+- `npx react-vite-mcp init <project-name>` - will create a new folder with the project name, and scaffold a react/vite app in it
+- `npx react-vite-mcp feature <project-name> <FeatureName>` - will add a new feature to the current project
+- `npx react-vite-mcp context <project-name> <ContextName>` - will add a new context to the current project
