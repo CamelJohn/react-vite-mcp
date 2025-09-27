@@ -1,0 +1,47 @@
+{
+  "name": "@hebejebe/react-vite-mcp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "react-vite-mcp": "./build/cli.js"
+  },
+  "scripts": {
+    "build": "./scripts/build.sh",
+    "init": "tsx ./src/index.ts init",
+    "feature": "tsx ./src/index.ts feature"
+  },
+  "files": [
+    "build"
+  ],
+  "keywords": [
+    "react",
+    "vite",
+    "typescript",
+    "spa",
+    "cli",
+    "mcp",
+    "scaffolding"
+  ],
+  "author": "Jonathan Atia",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.3",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.7"
+  },
+  "links": {
+    "npm": "https://www.npmjs.com/package/@hebejebe/react-vite-mcp"
+  }
+}
