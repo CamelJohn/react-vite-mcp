@@ -8,8 +8,9 @@
   },
   "scripts": {
     "build": "./scripts/build.sh",
-    "init": "tsx ./src/index.ts init",
-    "feature": "tsx ./src/index.ts feature"
+    "init": "tsx ./src/cli.ts init",
+    "feature": "tsx ./src/cli.ts feature",
+    "context": "tsx ./src/cli.ts context"
   },
   "files": [
     "build"

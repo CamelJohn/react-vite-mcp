@@ -5,6 +5,7 @@ import z from 'zod';
 
 import { init } from './tools/init';
 import { feature } from './tools/feature';
+import { context } from './tools/context';
 
 export const server = new McpServer({
   name: 'React over Vite MCP server',
@@ -32,6 +33,16 @@ server.tool(
     route: z.string().describe('The route for the feature, if applicable'),
   },
   feature
+);
+
+server.tool(
+  'context',
+  'add a shared context api to the project',
+  {
+    parent: z.string().describe('The parent component or module where the feature will be added'),
+    name: z.string().describe('The name of the context to be added'),
+  },
+  context
 );
 
 async function main() {
