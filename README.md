@@ -35,7 +35,3 @@ also, if your'e using claude CLI (hopefully any other llm cli) you can focus on 
 - `npx react-vite-mcp init <project-name>` - will create a new folder with the project name, and scaffold a react/vite app in it
 - `npx react-vite-mcp feature <project-name> <FeatureName>` - will add a new feature to the current project
 - `npx react-vite-mcp context <project-name> <ContextName>` - will add a new context to the current project
-
-```
-
-```
