@@ -7,7 +7,7 @@ export function build_migration_transaction(
   migration_file_name: string,
   checksum: string,
   migration: string
-) {
+): sqlite3.Transaction {
   const set_migration_as_pending = load_sql_query(
     MIGRATION_SQL_MAP.UPSERT_MIGRATION_AS_PENDING,
     'sql'

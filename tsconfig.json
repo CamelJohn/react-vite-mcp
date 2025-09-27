@@ -5,6 +5,10 @@
     "moduleResolution": "NodeNext",
     "outDir": ".build",
     "rootDir": "./src",
+    "baseUrl": ".",
+    "paths": {
+      "../database/*": [".build/database/*"]
+    },
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,

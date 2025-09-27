@@ -1,14 +1,13 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "outDir": ".build/database-temp",
     "rootDir": "database",
-    "outDir": ".build/database",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "target": "ES2020",
-    "esModuleInterop": true,
-    "allowJs": true,
-    "declaration": false
+    "declaration": true,
+    "strict": true
   },
-  "include": ["database/**/*.ts"]
+  "include": ["database/**/*"]
 }

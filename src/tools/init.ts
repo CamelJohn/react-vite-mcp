@@ -23,6 +23,10 @@ export const init = async ({ name }: IIinitArgs): Promise<CallToolResult> => {
   ];
 
   await run_commands(commands);
+  // @ts-ignore
+  const { run_migration_scripts } = await import('../database/migration.runner.js');
+
+  run_migration_scripts();
 
   return {
     content: [],
