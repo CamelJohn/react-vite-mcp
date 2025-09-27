@@ -57,3 +57,41 @@ This roadmap outlines the planned improvements for the `react-vite-mcp` library 
 ---
 
 _This roadmap is intended as a guide for iterative development of the MCP library, with a focus on LLM consumption and automation._
+
+# Suggested Roadmap Extensions
+
+## 1. Testing Integration
+
+Add a basic test framework setup (e.g., Vitest, Jest, or React Testing Library).
+
+Scaffold unit tests automatically when generating a new feature or context.
+
+Include example tests for contexts, components, and hooks.
+
+## 2. Granular Code Scaffolding
+
+Allow scaffolding hooks (useState, useEffect, custom hooks) into a component.
+
+Support injecting specific utilities or imports into existing components automatically.
+
+Option to scaffold component + hook + test in one command.
+
+## 3. Advanced Feature Generation
+
+Generate multiple features at once, possibly with dependencies between them.
+
+Support nested contexts or wrappers automatically in main.tsx or other entry points.
+
+Optionally auto-generate TypeScript types/interfaces for props, context, or hooks.
+
+## 4. Linting / Formatting / CI
+
+Include auto-formatting (Prettier) and linting (ESLint) integration in scaffolded code.
+
+Optionally generate GitHub Actions workflow for testing, building, and linting the project.
+
+## 5. Persistent Project Metadata
+
+Store generated features, contexts, and hooks in a JSON/SQLite file so Claude CLI doesn’t need to pass all args every time.
+
+Allow queries like: list contexts, list features, add hook to <component> without manual path input.
