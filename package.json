@@ -17,7 +17,13 @@
     "prepare": "npm run build",
     "init": "tsx ./src/cli.ts init",
     "feature": "tsx ./src/cli.ts feature",
-    "context": "tsx ./src/cli.ts context"
+    "context": "tsx ./src/cli.ts context",
+    "generate:migration": "./scripts/generate-migration.sh",
+    "generate:sql": "./scripts/generate-sql.sh",
+    "migrate": "./scripts/run-migrations.sh",
+    "rollback": "./scripts/rollback-migration.sh",
+    "db:init": "./scripts/init-db.sh",
+    "db:seed": "./scripts/seed-db.sh"
   },
   "keywords": [
     "react",
@@ -36,6 +42,7 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^24.5.2",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
