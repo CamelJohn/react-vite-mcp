@@ -14,6 +14,7 @@
   ],
   "scripts": {
     "build": "./scripts/build.sh",
+    "prepare": "npm run build",
     "init": "tsx ./src/cli.ts init",
     "feature": "tsx ./src/cli.ts feature",
     "context": "tsx ./src/cli.ts context"
