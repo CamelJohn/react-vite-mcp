@@ -2,8 +2,8 @@
 set -euo pipefail
 
 DB_FILE="src/database/mcp.db"
-MIGRATIONS_DIR="src/database/migrations"
-FIRST_MIGRATION="0000_create_migrations_table.sql"
+SQL_DIR="src/database/sql"
+CREATE_MIGRATIONS_TABLE="create_migrations_table.sql"
 
 # 1️⃣ Create DB file if it doesn't exist
 if [ ! -f "$DB_FILE" ]; then
@@ -12,5 +12,5 @@ if [ ! -f "$DB_FILE" ]; then
 fi
 
 # 2️⃣ Apply first migration
-sqlite3 "$DB_FILE" < "$MIGRATIONS_DIR/$FIRST_MIGRATION"
-echo "✅ Applied migration: $FIRST_MIGRATION"
+sqlite3 "$DB_FILE" < "$SQL_DIR/$CREATE_MIGRATIONS_TABLE"
+echo "✅ Applied migration: $CREATE_MIGRATIONS_TABLE"

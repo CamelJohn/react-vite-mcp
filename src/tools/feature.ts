@@ -4,7 +4,7 @@ import path from 'node:path';
 import { CallToolResult } from '@modelcontextprotocol/sdk/types.js';
 
 import { run_commands } from '../utils/run-commands.js';
-import { buildCopyCommand } from '../utils/build-copy-command.js';
+import { build_copy_command } from '../utils/build-copy-command.js';
 
 interface IAppendRouteArgs {
   kebabCaseName: string;
@@ -54,7 +54,7 @@ export const feature = async ({ parent, name }: IFeatureArgs): Promise<CallToolR
   const kebabCaseName = name.toLowerCase();
   const camelCaseName = name.charAt(0).toLowerCase() + name.slice(1);
 
-  const copyCommand = buildCopyCommand({
+  const copyCommand = build_copy_command({
     from: '../../templates/feature',
     to: [parent, 'src', 'pages', kebabCaseName],
   });

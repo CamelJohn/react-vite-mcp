@@ -1,0 +1,1 @@
+SELECT migration_name, status FROM migrations;

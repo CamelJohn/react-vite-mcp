@@ -9,6 +9,7 @@
   "files": [
     ".build/",
     "templates/",
+    "database/",
     "README.md",
     "LICENSE"
   ],
@@ -20,10 +21,9 @@
     "context": "tsx ./src/cli.ts context",
     "generate:migration": "./scripts/generate-migration.sh",
     "generate:sql": "./scripts/generate-sql.sh",
-    "migrate": "./scripts/run-migrations.sh",
-    "rollback": "./scripts/rollback-migration.sh",
-    "db:init": "./scripts/init-db.sh",
-    "db:seed": "./scripts/seed-db.sh"
+    "generate:backfill": "./scripts/generate-backfill.sh",
+    "migrate": "tsx ./src/database/migration.runner.ts",
+    "db:init": "./scripts/init-db.sh"
   },
   "keywords": [
     "react",

@@ -4,7 +4,7 @@ import path from 'node:path';
 import fs from 'node:fs';
 
 import { run_commands } from '../utils/run-commands.js';
-import { buildCopyCommand } from '../utils/build-copy-command.js';
+import { build_copy_command } from '../utils/build-copy-command.js';
 
 interface IIcontextArgs {
   name: string;
@@ -43,7 +43,7 @@ const wrap_with_context = (projectPath: string, contextName: string, name: strin
 
 export const context = async ({ name, parent }: IIcontextArgs): Promise<CallToolResult> => {
   const pascalCaseName = name.charAt(0).toUpperCase() + name.slice(1);
-  const copyCommand = buildCopyCommand({
+  const copyCommand = build_copy_command({
     from: '../../templates/context',
     to: [parent, 'src', 'shared', 'context', name],
   });

@@ -9,7 +9,7 @@ interface IBuildPathsArgs {
   to: string[];
 }
 
-export function buildPaths({ from, to }: IBuildPathsArgs) {
+export function build_paths({ from, to }: IBuildPathsArgs) {
   return {
     from: path.join(__dirname, from),
     to: path.join(process.cwd(), ...to),

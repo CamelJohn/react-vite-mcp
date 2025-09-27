@@ -31,13 +31,13 @@ const commands_map: Map<string, (args: any) => Promise<any>> = new Map([
   ],
 ]);
 
-const commandFn = commands_map.get(cmd);
-if (!commandFn) {
+const command_function = commands_map.get(cmd);
+if (!command_function) {
   console.log(`Unknown command: ${cmd}`);
   process.exit(1);
 }
 
-commandFn(args).catch((err) => {
+command_function(args).catch((err) => {
   console.error('Error:', err);
   process.exit(1);
 });
