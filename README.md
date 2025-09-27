@@ -1,5 +1,15 @@
 # react-vite-mcp
 
+[![npm version](https://img.shields.io/npm/v/@hebejebe/react-vite-mcp)](https://www.npmjs.com/package/@hebejebe/react-vite-mcp)
+
+A CLI to scaffold React + Vite apps with context & feature generation.
+
+## Installation
+
+```bash
+npm install @hebejebe/react-vite-mcp
+```
+
 ## The general idea here
 
 I built this mcp/cli so that I could shift the claude cli usage from being a code generator, to an orchestrator (Also, save many many tokens from my subscription plan).
@@ -25,3 +35,7 @@ also, if your'e using claude CLI (hopefully any other llm cli) you can focus on 
 - `npx react-vite-mcp init <project-name>` - will create a new folder with the project name, and scaffold a react/vite app in it
 - `npx react-vite-mcp feature <project-name> <FeatureName>` - will add a new feature to the current project
 - `npx react-vite-mcp context <project-name> <ContextName>` - will add a new context to the current project
+
+```
+
+```

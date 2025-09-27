@@ -44,5 +44,13 @@
   },
   "links": {
     "npm": "https://www.npmjs.com/package/@hebejebe/react-vite-mcp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CamelJohn/react-vite-mcp.git"
+  },
+  "homepage": "https://github.com/CamelJohn/react-vite-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/CamelJohn/react-vite-mcp/issues"
   }
 }
