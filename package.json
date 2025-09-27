@@ -4,7 +4,7 @@
   "description": "A CLI tool to scaffold React + Vite + TypeScript projects integrated with Model Context Protocol (MCP).",
   "main": "index.js",
   "bin": {
-    "react-vite-mcp": "./build/cli.js"
+    "react-vite-mcp": ".build/cli.js"
   },
   "files": [
     ".build/",
