@@ -1,6 +1,6 @@
 import path from 'node:path';
 
-const build_path_for = (entity: string) => path.join(process.cwd(), 'src', 'database', entity);
+const build_path_for = (entity: string) => path.join(process.cwd(), 'database', entity);
 
 export const PATHS = {
   DB_PATH: build_path_for('mcp.db'),

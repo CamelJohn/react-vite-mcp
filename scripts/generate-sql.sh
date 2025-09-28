@@ -10,7 +10,7 @@ fi
 SQL_SCRIPT_NAME=$(echo "$*" | tr ' ' '_' | tr '[:upper:]' '[:lower:]')
 FILENAME="${SQL_SCRIPT_NAME}.sql"
 
-SQL_DIR="src/database/sql"
+SQL_DIR="database/sql"
 mkdir -p "$SQL_DIR"
 
 touch "${SQL_DIR}/${FILENAME}"

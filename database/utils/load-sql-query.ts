@@ -4,7 +4,8 @@ import path from 'node:path';
 export type QueryType = 'migrations' | 'sql' | 'backfills';
 
 export function load_sql_query(fileName: string, type: QueryType = 'migrations'): string {
-  const sqlFilePath = path.join(process.cwd(), 'src', 'database', type, fileName);
+  console.log({ fileName });
+  const sqlFilePath = path.join(process.cwd(), 'database', type, fileName);
 
   if (!fs.existsSync(sqlFilePath)) {
     throw new Error(`SQL file not found: ${sqlFilePath}`);

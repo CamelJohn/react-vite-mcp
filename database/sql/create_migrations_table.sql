@@ -8,5 +8,5 @@ CREATE TABLE IF NOT EXISTS migrations (
     message TEXT
 );
 
-CREATE INDEX idx_migration_name ON migrations(migration_name);
-CREATE INDEX idx_status ON migrations(status);
+CREATE INDEX IF NOT EXISTS idx_migration_name ON migrations(migration_name);
+CREATE INDEX IF NOT EXISTS idx_status ON migrations(status);

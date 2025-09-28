@@ -11,7 +11,7 @@ MIGRATION_NAME=$(echo "$*" | tr ' ' '_' | tr '[:upper:]' '[:lower:]')
 TIMESTAMP=$(date +"%Y%m%d%H%M%S")
 FILENAME="${TIMESTAMP}_${MIGRATION_NAME}.sql"
 
-MIGRATIONS_DIR="src/database/migrations"
+MIGRATIONS_DIR="database/migrations"
 mkdir -p "$MIGRATIONS_DIR"
 
 touch "${MIGRATIONS_DIR}/${FILENAME}"

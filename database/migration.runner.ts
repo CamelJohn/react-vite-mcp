@@ -16,3 +16,5 @@ export function run_migration_scripts() {
     process.exit(1);
   }
 }
+
+run_migration_scripts();

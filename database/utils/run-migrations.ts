@@ -23,7 +23,7 @@ export function run_migrations(db: sqlite3.Database) {
     }
 
     const file_path = path.join(PATHS.MIGRATIONS_DIR, migration_file);
-    const query = load_sql_query(migration_file_name, 'migrations');
+    const query = load_sql_query(migration_file, 'migrations');
     const checksum = compute_checksum(file_path);
 
     console.log(`⏳ Running migration: ${migration_file_name}`);

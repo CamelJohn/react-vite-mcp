@@ -22,7 +22,7 @@
     "generate:migration": "./scripts/generate-migration.sh",
     "generate:sql": "./scripts/generate-sql.sh",
     "generate:backfill": "./scripts/generate-backfill.sh",
-    "migrate": "tsx ./src/database/migration.runner.ts",
+    "migrate": "tsx ./database/migration.runner.ts",
     "db:init": "./scripts/init-db.sh"
   },
   "keywords": [
@@ -47,6 +47,7 @@
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.3",
+    "better-sqlite3": "^12.4.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.2",
     "tsx": "^4.20.6",

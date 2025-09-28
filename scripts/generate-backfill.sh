@@ -10,7 +10,7 @@ fi
 SQL_SCRIPT_NAME=$(echo "$*" | tr ' ' '_' | tr '[:upper:]' '[:lower:]')
 FILENAME="${SQL_SCRIPT_NAME}.sql"
 
-SQL_DIR="src/database/backfill"
+SQL_DIR="database/backfill"
 mkdir -p "$SQL_DIR"
 
 touch "${SQL_DIR}/${FILENAME}"

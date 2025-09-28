@@ -18,7 +18,7 @@ export function build_migration_transaction(
   );
 
   return db.transaction(() => {
-    db.prepare(set_migration_as_pending).run(migration_file_name, checksum);
+    db.prepare(set_migration_as_pending).run(migration_file_name, checksum, '');
     db.exec(migration);
 
     db.prepare(update_migration_as_applied).run(migration_file_name);

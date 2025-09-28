@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DB_FILE="src/database/mcp.db"
-SQL_DIR="src/database/sql"
+DB_FILE="database/mcp.db"
+SQL_DIR="database/sql"
 CREATE_MIGRATIONS_TABLE="create_migrations_table.sql"
 
 # 1️⃣ Create DB file if it doesn't exist
